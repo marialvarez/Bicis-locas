@@ -28,13 +28,14 @@
           <div class="lastname-container input-box">
             <label for="lastname" class="sr-only">Apellido</label>
             <input type="text" id="lastname" class="form-control"
-            placeholder="Ingrese su apellido" required>
+            placeholder="Ingrese su apellido" onkeyup="validateMA(event)" onkeydown="validateTA(event)" required>
           </div>
           <div class="email-container input-box">
             <label for="inputEmail" class="sr-only">
               Correo Electrónico
             </label>
-            <input type="email" id="input-email" class="form-control" placeholder="Ingrese su correo electrónico" autofocus="" onkeypress="validateEmail(event)" required>
+            <input type="email" id="input-email" class="form-control" placeholder="Ingrese su correo electrónico" autofocus="" onkeyup="validateEmail(event)" required>
+            <div id="mensaje3"></div>
           </div>
           <div class="form-group">
             <label for="inputPassword" class="sr-only">
@@ -44,7 +45,7 @@
             <div id="mensaje"></div>
           </div>
           <div class="form-group">
-            <select class="form-control">
+            <select class="form-control" onchange="validateType(event)" >
               <option value="0">Selecciona tu tipo de bici</option>
               <option value="urbana">Urbana</option>
               <option value="treking">Treking</option>
