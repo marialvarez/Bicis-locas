@@ -47,6 +47,7 @@ function validateMA(_evt){
         var nombreArray = apellido.split("");
         var primeraLetra = nombreArray[0];
         var primeraMayus = primeraLetra.toUpperCase();
+        
         var cortePalabra = false;
       
         for(var i=1;i<nombreArray.length;i++){
@@ -55,11 +56,12 @@ function validateMA(_evt){
                 primeraMayus += nombreArray[i].toUpperCase();
                 cortePalabra = false;
             }
-            else
+            else {
                 primeraMayus+=nombreArray[i];
                     if(nombreArray[i] == " ")
                        cortePalabra = true;     
-        }
+            }
+            }
        
        document.getElementById("lastname").value = primeraMayus; 
 }
@@ -91,9 +93,8 @@ function validateMA(_evt){
       
 } 
 
-
-//El campo password debe tener al menos 6 caracteres
-//El campo password no puede ser igual a "password" ó "123456" ó "098754"    
+//VALIDAR CONTRASEÑA
+  
   function validatePass(_evt){
       
       var pass = document.getElementById("input-password").value;
@@ -101,14 +102,14 @@ function validateMA(_evt){
       
       
       if((pass != "123456" || pass != "098754" || pass.toLowerCase() != "password") && (pass.length < 6) ) {
-       msg.innerHTML = "<h5 style='color:#FF1493';>Contraseña Inválida</h5>"
+       msg.innerHTML = "<h5 style='color:#FF1493';>La contraseña debe contener seis o más caracteres</h5>"
       } else {
        msg.innerHTML = "";
       }
         
   }
     
-
+//TIPO DE BICICLETA
   function validateType(_evt){
       
       var type = document.querySelector("select").value;
