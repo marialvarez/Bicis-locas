@@ -16,8 +16,8 @@ function validateM(_evt){
             }
             else
                 primeraMayus+=nombreArray[i];
-            if(nombreArray[i] == " ")
-                cortePalabra = true;
+                    if(nombreArray[i] == " ")
+                    cortePalabra = true;
             
         }
        
@@ -57,8 +57,8 @@ function validateMA(_evt){
             }
             else
                 primeraMayus+=nombreArray[i];
-            if(nombreArray[i] == " ")
-                cortePalabra = true;     
+                    if(nombreArray[i] == " ")
+                       cortePalabra = true;     
         }
        
        document.getElementById("lastname").value = primeraMayus; 
@@ -84,7 +84,7 @@ function validateMA(_evt){
       var mensaje = document.getElementById("mensaje3");
       
       if(!/([a-zA-Z0-9(-_.)]+[@][a-zA-Z0-9]+[.][a-zA-Z]+)/g.test(email)){
-        mensaje.innerHTML = "<h5 style='color:#8A2BE2';>Correo Electrónico Inválido</h5>"
+        mensaje.innerHTML = "<h5 style='color:#FF1493;>Correo Electrónico Inválido</h5>"
       } else {
         mensaje.innerHTML = "";
       }
@@ -101,7 +101,7 @@ function validateMA(_evt){
       
       
       if((pass != "123456" || pass != "098754" || pass.toLowerCase() != "password") && (pass.length < 6) ) {
-       msg.innerHTML = "<h5 style='color:#8A2BE2';>Contraseña Inválida</h5>"
+       msg.innerHTML = "<h5 style='color:#FF1493';>Contraseña Inválida</h5>"
       } else {
        msg.innerHTML = "";
       }
@@ -116,7 +116,7 @@ function validateMA(_evt){
       
       
       if(type == 0){
-          mensaje.innerHTML = "<h5 style='color:#8A2BE2';>No seleccionaste ninguna bicicleta</h5>";
+          mensaje.innerHTML = "<h5 style='color:#FF1493';>No seleccionaste ninguna bicicleta</h5>";
       } else {
           mensaje.innerHTML = "";
       }   
