@@ -86,7 +86,7 @@ function validateMA(_evt){
       var mensaje = document.getElementById("mensaje3");
       
       if(!/([a-zA-Z0-9(-_.)]+[@][a-zA-Z0-9]+[.][a-zA-Z]+)/g.test(email)){
-        mensaje.innerHTML = "<h5 style='color:#FF1493;>Correo Electrónico Inválido</h5>"
+        mensaje.innerHTML = "<h5 style='color:#FF1493';>Correo Electrónico Inválido, debe contener ejemplo: hola@dominio.com</h5>"
       } else {
         mensaje.innerHTML = "";
       }
