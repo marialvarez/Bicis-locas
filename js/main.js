@@ -32,7 +32,6 @@ function validateM(_evt){
         if((palabra>=65 && palabra<=90)||palabra==8||palabra==32){
             
         } else {
-            // = "";
             //alert("Este campo solo permite caracteres de la A-Z");
             _evt.preventDefault();
         }
@@ -126,6 +125,17 @@ function validateMA(_evt){
 //ENVIAR TIPO DE BICICLETA SOLO AL PRESIONAR "REGISTRAR"
  function validateForm(){
     validateType();
+     
+    var nombre = document.getElementById("name").value;
+    var apellido = document.getElementById("lastname").value;
+    var email = document.getElementById("input-email").value;
+    var contraseña = document.getElementById("input-password").value;
+    var tipo = document.querySelector("select").value;
+    var mensaje = document.getElementById("mensaje4");
+     
+     if(nombre!=""||apellido!=""||emaiL!=""||contraseña!=""){
+        mensaje.innerHTML = "<h5 style='color:#FF1493';>¡Completaste el formulario!</h5>"
+     }
  }
 
 
